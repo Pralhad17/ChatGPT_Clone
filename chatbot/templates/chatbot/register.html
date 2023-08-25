@@ -1,0 +1,34 @@
+{% extends 'chatbot/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<style>
+    .form-layout {
+        border-radius: 15px;
+        width: 400px;
+    }
+</style>
+
+<body>
+    <div class="container max-auto bg-info shadow-md p-4 form-layout">
+        <h3>Create Your Account </h3>
+
+        <h5>Start managing your clients today! </h5>
+        <hr>
+        <br>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            {{forms|crispy}}
+            <br>
+            <button type="submit" class="btn btn-primary btn-block p-2">Create Account &nbsp; <i class="fa fa-plus"
+                    aria-hidden="true"></i></button>
+        </form>
+        <br>
+        <div class="text-center">
+            <p>Already have an Account? </p><a href="{% url 'login' %}">Login</a>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

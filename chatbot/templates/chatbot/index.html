@@ -1,0 +1,17 @@
+{% extends 'chatbot/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<body>
+    <div class="text-center">
+        <h3>ChatGPT Clone Application</h3>
+        <br>
+        <h5>Welcome to AI world !!</h5>
+        <hr>
+        <br>
+
+        <a class="btn btn-primary" href="{% url 'register' %}">Create Your Account </a>
+    </div>
+</body>
+{% endblock %}
